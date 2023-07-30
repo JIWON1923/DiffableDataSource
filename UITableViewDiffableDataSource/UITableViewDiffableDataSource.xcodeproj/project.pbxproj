@@ -13,6 +13,8 @@
 		873AB3CF2A766BC400CC6F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AB3CD2A766BC400CC6F92 /* Main.storyboard */; };
 		873AB3D12A766BC500CC6F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873AB3D02A766BC500CC6F92 /* Assets.xcassets */; };
 		873AB3D42A766BC500CC6F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AB3D22A766BC500CC6F92 /* LaunchScreen.storyboard */; };
+		873AB3E22A76B92600CC6F92 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AB3E12A76B92600CC6F92 /* Shortcut.swift */; };
+		873AB3E42A76B9B000CC6F92 /* ShortcutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AB3E32A76B9B000CC6F92 /* ShortcutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		873AB3D02A766BC500CC6F92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		873AB3D32A766BC500CC6F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873AB3D52A766BC500CC6F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873AB3E12A76B92600CC6F92 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		873AB3E32A76B9B000CC6F92 /* ShortcutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		873AB3C62A766BC400CC6F92 /* UITableViewDiffableDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				873AB3DD2A76B8E700CC6F92 /* Models */,
+				873AB3E02A76B90700CC6F92 /* Controllers */,
+				873AB3DF2A76B8FB00CC6F92 /* Views */,
 				873AB3C72A766BC400CC6F92 /* AppDelegate.swift */,
 				873AB3C92A766BC400CC6F92 /* SceneDelegate.swift */,
-				873AB3CB2A766BC400CC6F92 /* ViewController.swift */,
-				873AB3CD2A766BC400CC6F92 /* Main.storyboard */,
 				873AB3D02A766BC500CC6F92 /* Assets.xcassets */,
 				873AB3D22A766BC500CC6F92 /* LaunchScreen.storyboard */,
 				873AB3D52A766BC500CC6F92 /* Info.plist */,
 			);
 			path = UITableViewDiffableDataSource;
+			sourceTree = "<group>";
+		};
+		873AB3DD2A76B8E700CC6F92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				873AB3E12A76B92600CC6F92 /* Shortcut.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		873AB3DF2A76B8FB00CC6F92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				873AB3CD2A766BC400CC6F92 /* Main.storyboard */,
+				873AB3E32A76B9B000CC6F92 /* ShortcutTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		873AB3E02A76B90700CC6F92 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				873AB3CB2A766BC400CC6F92 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				873AB3CC2A766BC400CC6F92 /* ViewController.swift in Sources */,
+				873AB3E42A76B9B000CC6F92 /* ShortcutTableViewCell.swift in Sources */,
+				873AB3E22A76B92600CC6F92 /* Shortcut.swift in Sources */,
 				873AB3C82A766BC400CC6F92 /* AppDelegate.swift in Sources */,
 				873AB3CA2A766BC400CC6F92 /* SceneDelegate.swift in Sources */,
 			);

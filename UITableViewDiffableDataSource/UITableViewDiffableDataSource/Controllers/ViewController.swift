@@ -9,7 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var data = ["1", "2", "3"]
+    private var data: [Shortcut] = [
+        Shortcut(title: "단축어1", subTitle: "단축어를 써보세요"),
+        Shortcut(title: "단축어2", subTitle: "쉽게 써 보자"),
+        Shortcut(title: "단축어3", subTitle: "꿀도 좀 빨아보자")
+    ]
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -29,8 +33,8 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "MyCell")
-        cell.textLabel?.text = data[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ShortcutTableViewCell.id, for: indexPath) as? ShortcutTableViewCell else { return UITableViewCell() }
+        cell.config(with: data[indexPath.row])
         return cell
     }
 }
