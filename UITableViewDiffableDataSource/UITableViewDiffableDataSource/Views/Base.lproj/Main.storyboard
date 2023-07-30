@@ -79,6 +79,30 @@
                                             <outlet property="titleLabel" destination="qAs-q8-GTY" id="YZ9-vO-rV6"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomHeaderView" id="xV2-gr-1fT" customClass="CustomHeaderView" customModule="UITableViewDiffableDataSource" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="393" height="40.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerView" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xV2-gr-1fT" id="Sn9-pA-1rG">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grt-AH-IxS">
+                                                    <rect key="frame" x="16" y="7.9999999999999982" width="48" height="24.333333333333329"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="grt-AH-IxS" firstAttribute="leading" secondItem="Sn9-pA-1rG" secondAttribute="leading" constant="16" id="1GR-O6-akM"/>
+                                                <constraint firstItem="grt-AH-IxS" firstAttribute="top" secondItem="Sn9-pA-1rG" secondAttribute="top" constant="8" id="3Pl-KM-SE3"/>
+                                                <constraint firstAttribute="bottom" secondItem="grt-AH-IxS" secondAttribute="bottom" constant="8" id="JaF-0T-OgV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="grt-AH-IxS" id="QVc-kV-2ED"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

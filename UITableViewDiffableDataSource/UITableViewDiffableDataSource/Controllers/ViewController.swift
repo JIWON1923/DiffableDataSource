@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    private var headerData = ["카테고리", "어쩌고", "저쩌고"]
     private var data: [[Shortcut]] = [
         [
             Shortcut(title: "단축어1", subTitle: "단축어를 써보세요"),
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         data.count
     }
@@ -51,6 +52,20 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ShortcutTableViewCell.id, for: indexPath) as? ShortcutTableViewCell else { return UITableViewCell() }
         cell.config(with: data[indexPath.section][indexPath.row])
+        return cell
+    }
+    
+    /*
+     /// 기본 header 사용
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     headerData[section]
+     }
+     */
+    
+    /// custom table view cell을 이용해서 header view 사용
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomHeaderView.id) as? CustomHeaderView else { return nil }
+        cell.config(title: headerData[section])
         return cell
     }
 }
