@@ -28,7 +28,11 @@ class ViewController: UIViewController {
     
     private var dataSource: UITableViewDiffableDataSource<Section, Shortcut>!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,5 +75,18 @@ class ViewController: UIViewController {
         snapshot.appendItems(popular, toSection: .popular)
         snapshot.appendItems(latest, toSection: .latest)
         dataSource.apply(snapshot)
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let shortcut = dataSource.itemIdentifier(for: indexPath) else { return nil }
+        let action = UIContextualAction(style: .destructive, title: nil) { (action, view, success: @escaping (Bool) -> Void) in
+            var snapshot = self.dataSource.snapshot()
+            snapshot.deleteItems([shortcut])
+            self.dataSource.apply(snapshot)
+        }
+        action.image = UIImage(systemName: "trash")
+        return UISwipeActionsConfiguration(actions: [action])
     }
 }

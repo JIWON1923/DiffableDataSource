@@ -67,6 +67,7 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AG0-Gv-gkK" secondAttribute="trailing" constant="16" id="M6m-Z4-pVd"/>
                                                 <constraint firstItem="AG0-Gv-gkK" firstAttribute="leading" secondItem="MXh-8n-Txe" secondAttribute="trailing" constant="8" id="aLP-c5-HF8"/>
                                                 <constraint firstAttribute="bottom" secondItem="MXh-8n-Txe" secondAttribute="bottom" constant="8" id="iag-Zo-Crq"/>
                                                 <constraint firstItem="AG0-Gv-gkK" firstAttribute="centerY" secondItem="sgj-wN-4b0" secondAttribute="centerY" id="jN5-W7-BcK"/>
@@ -97,6 +98,7 @@
                                                 <constraint firstItem="grt-AH-IxS" firstAttribute="leading" secondItem="Sn9-pA-1rG" secondAttribute="leading" constant="16" id="1GR-O6-akM"/>
                                                 <constraint firstItem="grt-AH-IxS" firstAttribute="top" secondItem="Sn9-pA-1rG" secondAttribute="top" constant="8" id="3Pl-KM-SE3"/>
                                                 <constraint firstAttribute="bottom" secondItem="grt-AH-IxS" secondAttribute="bottom" constant="8" id="JaF-0T-OgV"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="grt-AH-IxS" secondAttribute="trailing" constant="16" id="Lu3-m4-ada"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
