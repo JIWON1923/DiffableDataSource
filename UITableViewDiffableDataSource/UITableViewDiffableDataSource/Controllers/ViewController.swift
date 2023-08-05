@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    enum Section {
+    enum Section: CaseIterable {
         case category
         case popular
         case latest
@@ -76,6 +76,16 @@ class ViewController: UIViewController {
         snapshot.appendItems(latest, toSection: .latest)
         dataSource.apply(snapshot)
     }
+    
+    /// 랜덤 section에 단축어 추가
+    @IBAction func didTappedAddShortcut(_ sender: UIButton) {
+        let section = Section.allCases.randomElement() ?? .category
+        var snapshot = dataSource.snapshot()
+        let newShortcut = Shortcut(title: "단축어", subTitle: "새로운 단축어가 추가됐습니다.")
+        snapshot.appendItems([newShortcut], toSection: section)
+        dataSource.apply(snapshot)
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate {

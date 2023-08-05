@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eSX-ad-Tw8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="724.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShortcutCell" rowHeight="62" id="pU5-Lj-Zzi" customClass="ShortcutTableViewCell" customModule="UITableViewDiffableDataSource" customModuleProvider="target">
@@ -107,14 +107,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lag-Tz-CwW">
+                                <rect key="frame" x="0.0" y="783.66666666666663" width="393" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="단축어 추가"/>
+                                <connections>
+                                    <action selector="didTappedAddShortcut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ei0-Zw-EwO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSX-ad-Tw8" secondAttribute="bottom" id="0sc-Js-hGz"/>
                             <constraint firstItem="eSX-ad-Tw8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="50e-OE-wgB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lag-Tz-CwW" secondAttribute="bottom" id="DLu-cj-324"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSX-ad-Tw8" secondAttribute="trailing" id="IPj-g1-EW9"/>
                             <constraint firstItem="eSX-ad-Tw8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lid-4i-2rc"/>
+                            <constraint firstItem="lag-Tz-CwW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V2a-bj-UOl"/>
+                            <constraint firstItem="lag-Tz-CwW" firstAttribute="top" secondItem="eSX-ad-Tw8" secondAttribute="bottom" id="b3A-ja-m10"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lag-Tz-CwW" secondAttribute="trailing" id="n7h-mY-sHY"/>
                         </constraints>
                     </view>
                     <connections>

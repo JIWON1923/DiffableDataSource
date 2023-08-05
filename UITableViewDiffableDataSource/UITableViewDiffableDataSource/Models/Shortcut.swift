@@ -25,7 +25,6 @@ struct Shortcut: Hashable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
-//        hasher.combine(isLiked)
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
